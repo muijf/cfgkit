@@ -1,0 +1,10 @@
+{
+  "name": "@cfgkit/core",
+  "version": "0.1.0",
+  "description": "Core package for cfgkit",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "devDependencies": {
+    "@types/node": "^22.13.10"
+  }
+}

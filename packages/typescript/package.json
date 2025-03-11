@@ -1,0 +1,16 @@
+{
+  "name": "@cfgkit/typescript",
+  "version": "0.1.0",
+  "description": "Typescript package for cfgkit",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "dependencies": {
+    "@cfgkit/utils": "workspace:*",
+    "json5": "^2.2.3",
+    "@swc/core": "^1.11.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.10",
+    "typescript": "^5.8.2"
+  }
+}
