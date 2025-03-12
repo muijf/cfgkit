@@ -8,7 +8,7 @@
   "scripts": {
     "build": "turbo run build",
     "release": "changeset publish",
-    "release:dev": "changeset version --snapshot dev && changeset publish --tag dev"
+    "release:dev": "changeset version --snapshot dev && changeset publish --tag dev --registry=https://packages.npm.org"
   },
   "devDependencies": {
     "@changesets/changelog-github": "^0.5.1",
