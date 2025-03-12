@@ -21,10 +21,10 @@ interface Config {
 }
 
 const cfg = await config<Config>({
-  loaders: ["@cfgkit/typescript", "@cfgkit/javascript"],
+  loaders: ["@cfgkit/typescript", "@cfgkit/javascript"], // Default
   include: [".cfgkit/config.{ts,js,.cjs}", "cfgkit.config.{ts,js}"],
-  cwd: process.cwd(),
-  throwOnMultiple: true,
+  cwd: process.cwd(), // Default
+  throwOnMultiple: true, // Default
 });
 
 console.log(cfg.default().hello);

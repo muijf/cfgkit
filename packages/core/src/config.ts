@@ -39,7 +39,8 @@ export interface Config {
   /**
    * The loaders to use to load the config files.
    * You can also pass package names to load the default loader for that package
-   * and let it throw if the package has to be installed.
+   * and let it throw if the package has to be installed. By default,
+   * the loaders will be `['@cfgkit/typescript', '@cfgkit/javascript']`.
    */
   loaders?: (string | Loader)[];
 
@@ -70,6 +71,10 @@ export async function config<T = any>(config: Config) {
   const cwd = config.cwd ?? process.cwd();
   const throwOnMultiple = config.throwOnMultiple ?? true;
   const include = await glob(config.include, { cwd: config.cwd });
+  const loaders = config.loaders ?? [
+    "@cfgkit/typescript",
+    "@cfgkit/javascript",
+  ];
 
   if (include.length === 0)
     throw new Error("No config files found: " + include.join(", "));
