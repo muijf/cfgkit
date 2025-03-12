@@ -1,6 +1,6 @@
 {
   "name": "@cfgkit/core",
-  "version": "0.0.0",
+  "version": "0.0.0-dev-20250312215221",
   "description": "Core package for cfgkit",
   "homepage": "https://docs.muijf.com/cfgkit",
   "sideEffects": false,
@@ -29,7 +29,6 @@
   },
   "dependencies": {
     "@cfgkit/shared": "workspace:*",
-    "@cfgkit/typescript": "workspace:*",
     "@standard-schema/spec": "^1.0.0",
     "glob": "^11.0.1"
   },

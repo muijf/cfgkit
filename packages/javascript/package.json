@@ -1,6 +1,6 @@
 {
   "name": "@cfgkit/javascript",
-  "version": "0.0.0",
+  "version": "0.0.0-dev-20250312215221",
   "description": "Javascript package for cfgkit",
   "homepage": "https://docs.muijf.com/cfgkit",
   "sideEffects": false,
