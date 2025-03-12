@@ -6,7 +6,7 @@ import {
   LOADER_SUGGESTIONS,
   type YamlPackage,
 } from "@cfgkit/shared";
-import { type NonEmptyArray } from "@cfgkit/utils";
+import { type OneOrNonEmptyArray } from "@cfgkit/utils";
 import type { StandardSchemaV1 } from "@standard-schema/spec";
 import { glob } from "glob";
 import { extname, resolve } from "path";
@@ -58,7 +58,7 @@ export interface Config<Data = any> {
   /**
    * The glob pattern to include in the config search.
    */
-  include: string | NonEmptyArray<string>;
+  include: OneOrNonEmptyArray<string>;
 
   /**
    * The current working directory of the config file.

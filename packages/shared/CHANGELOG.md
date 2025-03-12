@@ -1,5 +1,11 @@
 # @cfgkit/shared
 
+## 0.0.0-dev-20250312223043
+
+### Patch Changes
+
+- f35cb2f: Just a small fix
+
 ## 0.0.0-dev-20250312221538
 
 ### Patch Changes

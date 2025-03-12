@@ -1,6 +1,6 @@
 {
   "name": "@cfgkit/shared",
-  "version": "0.0.0-dev-20250312221538",
+  "version": "0.0.0-dev-20250312223043",
   "description": "Shared package for cfgkit",
   "homepage": "https://docs.muijf.com/cfgkit",
   "main": "./dist/index.js",

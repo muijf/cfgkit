@@ -1,5 +1,15 @@
 # @cfgkit/toml
 
+## 0.0.0-dev-20250312223043
+
+### Patch Changes
+
+- f35cb2f: Just a small fix
+- Updated dependencies [f35cb2f]
+  - @cfgkit/shared@0.0.0-dev-20250312223043
+  - @cfgkit/utils@0.0.0-dev-20250312223043
+  - @cfgkit/core@0.0.0-dev-20250312223043
+
 ## 0.0.0-dev-20250312221538
 
 ### Patch Changes
