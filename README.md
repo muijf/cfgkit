@@ -9,6 +9,9 @@
 - [Core](./packages/core) - The core package for cfgkit
 - [Typescript](./packages/typescript) - The TypeScript package for cfgkit
 - [Javascript](./packages/javascript) - The JavaScript package for cfgkit
+- [Json](./packages/json) - The JSON package for cfgkit
+- [Toml](./packages/toml) - The TOML package for cfgkit
+- [Yaml](./packages/yaml) - The YAML package for cfgkit
 - [Utils](./packages/utils) - The utils package for cfgkit
 
 # Usage
