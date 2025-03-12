@@ -3,6 +3,9 @@
   "version": "0.0.0-dev-20250312215221",
   "description": "Shared package for cfgkit",
   "homepage": "https://docs.muijf.com/cfgkit",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
   "sideEffects": false,
   "repository": {
     "type": "git",

@@ -47,9 +47,9 @@ importers:
       '@cfgkit/shared':
         specifier: workspace:*
         version: link:../shared
-      '@cfgkit/typescript':
+      '@cfgkit/utils':
         specifier: workspace:*
-        version: link:../typescript
+        version: link:../utils
       '@standard-schema/spec':
         specifier: ^1.0.0
         version: 1.0.0
@@ -66,6 +66,9 @@ importers:
 
   packages/javascript:
     dependencies:
+      '@cfgkit/core':
+        specifier: workspace:*
+        version: link:../core
       '@cfgkit/shared':
         specifier: workspace:*
         version: link:../shared
@@ -82,6 +85,9 @@ importers:
 
   packages/json:
     dependencies:
+      '@cfgkit/core':
+        specifier: workspace:*
+        version: link:../core
       '@cfgkit/shared':
         specifier: workspace:*
         version: link:../shared
@@ -110,6 +116,12 @@ importers:
 
   packages/toml:
     dependencies:
+      '@cfgkit/core':
+        specifier: workspace:*
+        version: link:../core
+      '@cfgkit/shared':
+        specifier: workspace:*
+        version: link:../shared
       '@cfgkit/utils':
         specifier: workspace:*
         version: link:../utils
@@ -126,6 +138,12 @@ importers:
 
   packages/typescript:
     dependencies:
+      '@cfgkit/core':
+        specifier: workspace:*
+        version: link:../core
+      '@cfgkit/shared':
+        specifier: workspace:*
+        version: link:../shared
       '@cfgkit/utils':
         specifier: workspace:*
         version: link:../utils
@@ -161,6 +179,9 @@ importers:
 
   packages/yaml:
     dependencies:
+      '@cfgkit/core':
+        specifier: workspace:*
+        version: link:../core
       '@cfgkit/shared':
         specifier: workspace:*
         version: link:../shared

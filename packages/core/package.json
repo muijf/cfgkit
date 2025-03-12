@@ -3,6 +3,9 @@
   "version": "0.0.0-dev-20250312215221",
   "description": "Core package for cfgkit",
   "homepage": "https://docs.muijf.com/cfgkit",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
   "sideEffects": false,
   "repository": {
     "type": "git",
@@ -28,6 +31,7 @@
     "build": "tsup"
   },
   "dependencies": {
+    "@cfgkit/utils": "workspace:*",
     "@cfgkit/shared": "workspace:*",
     "@standard-schema/spec": "^1.0.0",
     "glob": "^11.0.1"

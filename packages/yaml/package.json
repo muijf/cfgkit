@@ -28,6 +28,7 @@
     "build": "tsup"
   },
   "dependencies": {
+    "@cfgkit/core": "workspace:*",
     "@cfgkit/shared": "workspace:*",
     "@cfgkit/utils": "workspace:*",
     "yaml": "^2.7.0"
