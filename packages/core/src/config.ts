@@ -11,6 +11,7 @@ import type { StandardSchemaV1 } from "@standard-schema/spec";
 import { glob } from "glob";
 import { extname, resolve } from "path";
 import { validate } from "./validate";
+import { expandArgs } from "./expandArgs";
 
 /**
  * The package name of the loader.
@@ -147,9 +148,11 @@ export async function config<Result = any, Data = any>(config: Config<Data>) {
     return { ...acc, ...result };
   }, {} as Result);
 
+  const expanded = expandArgs(result, config.data || {});
+
   if (config.validate) {
-    return validate(config.validate, result) as Result;
+    return validate(config.validate, expanded) as Result;
   }
 
-  return result as Result;
+  return expanded as Result;
 }

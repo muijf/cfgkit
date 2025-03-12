@@ -1,6 +1,6 @@
 {
   "name": "@cfgkit/utils",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Utils package for cfgkit",
   "main": "./src/index.ts",
   "types": "./src/index.ts",

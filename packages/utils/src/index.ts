@@ -6,4 +6,3 @@ export * from "./requireHook";
 export * from "./resolveFrom";
 export * from "./nonEmptyArray";
 export * from "./parseJsonFile";
-export * from "./expandArgs";
