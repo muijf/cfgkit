@@ -4,5 +4,6 @@ export * from "./picoColors";
 export * from "./realPath";
 export * from "./requireHook";
 export * from "./resolveFrom";
-export * from "./parseJsonFile";
 export * from "./nonEmptyArray";
+export * from "./parseJsonFile";
+export * from "./expandArgs";

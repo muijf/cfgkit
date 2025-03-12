@@ -17,15 +17,21 @@
 import { config } from "@cfgkit/core";
 
 interface Config {
-  default: () => { hello: "world" };
+  hello: string;
 }
 
-const cfg = await config<Config>({
-  loaders: ["@cfgkit/typescript", "@cfgkit/javascript"], // Default
-  include: [".cfgkit/config.{ts,js,.cjs}", "cfgkit.config.{ts,js}"],
-  cwd: process.cwd(), // Default
-  throwOnMultiple: true, // Default
+interface Data {
+  world: string;
+}
+
+const cfg = await config<Config, Data>({
+  loaders: ["@cfgkit/typescript"],
+  include: ["cfgkit.config.ts"],
+  cwd: process.cwd(),
+  data: {
+    world: "world",
+  },
 });
 
-console.log(cfg.default().hello);
+console.log(cfg.hello);
 ```

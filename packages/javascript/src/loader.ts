@@ -1,15 +1,26 @@
-import type { Loader } from "@cfgkit/core";
+import type { Config, Loader } from "@cfgkit/core";
+import { JAVASCRIPT_EXTENSIONS, type JavascriptPackage } from "@cfgkit/shared";
+import { JAVASCRIPT_PACKAGE } from "@cfgkit/shared";
 
 export interface JavascriptLoader extends Loader {
-  __package: "@cfgkit/javascript";
+  __package: JavascriptPackage;
 }
 
 export function javascript(): JavascriptLoader {
   return {
-    __package: "@cfgkit/javascript",
-    extensions: [".js", ".cjs", ".mjs"],
-    load(path: string): Promise<any> {
-      return import(path);
+    __package: JAVASCRIPT_PACKAGE,
+    extensions: JAVASCRIPT_EXTENSIONS,
+    async load(config: Config, path: string): Promise<any> {
+      const imported = await import(path);
+
+      if (imported.default) {
+        if (typeof imported.default === "function")
+          return imported.default(config.data);
+
+        return imported.default;
+      }
+
+      return imported;
     },
   };
 }

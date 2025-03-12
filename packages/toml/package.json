@@ -1,12 +1,12 @@
 {
-  "name": "@cfgkit/javascript",
+  "name": "@cfgkit/toml",
   "version": "0.1.0",
-  "description": "Javascript package for cfgkit",
+  "description": "TOML package for cfgkit",
   "main": "./src/index.ts",
   "types": "./src/index.ts",
   "dependencies": {
     "@cfgkit/utils": "workspace:*",
-    "@cfgkit/shared": "workspace:*"
+    "smol-toml": "^1.3.1"
   },
   "devDependencies": {
     "@types/node": "^22.13.10"

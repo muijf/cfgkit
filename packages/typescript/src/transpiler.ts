@@ -4,9 +4,9 @@ import { join } from "node:path";
 import { readFile } from "node:fs/promises";
 import {
   deregisterHook,
+  parseJsonFile,
   registerHook,
   requireFromString,
-  parseJsonFile,
 } from "@cfgkit/utils";
 
 function resolveSWCOptions(
@@ -33,7 +33,7 @@ function resolveSWCOptions(
 async function lazilyGetTSConfig(cwd: string) {
   let tsConfig: { compilerOptions: CompilerOptions };
   try {
-    tsConfig = parseJsonFile(join(cwd, "tsconfig.json"));
+    tsConfig = await parseJsonFile(join(cwd, "tsconfig.json"));
   } catch (error) {
     // ignore if tsconfig.json does not exist
     if ((error as NodeJS.ErrnoException).code !== "ENOENT") {

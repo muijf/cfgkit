@@ -1,8 +1,8 @@
 import { readFile } from "fs/promises";
-import JSON5 from "json5";
+import { parse } from "yaml";
 
-export async function parseJsonFile(path: string) {
+export async function parseYamlFile(path: string) {
   const contents = await readFile(path, "utf8");
   if (contents.trim() === "") return {};
-  return JSON5.parse(contents);
+  return parse(contents);
 }

@@ -4,8 +4,11 @@
     "load": "bun load.ts"
   },
   "dependencies": {
-    "@cfgkit/typescript": "workspace:*",
+    "@cfgkit/core": "workspace:*",
     "@cfgkit/javascript": "workspace:*",
-    "@cfgkit/core": "workspace:*"
+    "@cfgkit/json": "workspace:*",
+    "@cfgkit/toml": "workspace:*",
+    "@cfgkit/typescript": "workspace:*",
+    "zod": "^3.24.2"
   }
 }

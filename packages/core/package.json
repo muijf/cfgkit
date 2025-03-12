@@ -5,7 +5,9 @@
   "main": "./src/index.ts",
   "types": "./src/index.ts",
   "dependencies": {
+    "@cfgkit/shared": "workspace:*",
     "@cfgkit/typescript": "workspace:*",
+    "@standard-schema/spec": "^1.0.0",
     "glob": "^11.0.1"
   },
   "devDependencies": {
