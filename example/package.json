@@ -1,0 +1,11 @@
+{
+  "name": "cfgkit-example-test",
+  "scripts": {
+    "load": "bun load.ts"
+  },
+  "dependencies": {
+    "@cfgkit/typescript": "workspace:*",
+    "@cfgkit/javascript": "workspace:*",
+    "@cfgkit/core": "workspace:*"
+  }
+}

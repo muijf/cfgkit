@@ -1,8 +1,7 @@
 {
-  "name": "cfgkit",
-  "private": true,
   "workspaces": [
-    "packages/*"
+    "packages/*",
+    "example"
   ],
   "devDependencies": {
     "typescript": "^5.0.0"
