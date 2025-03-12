@@ -84,7 +84,7 @@ export interface Config<Data = any> {
  */
 export async function config<Result = any, Data = any>(config: Config<Data>) {
   const cwd = config.cwd ?? process.cwd();
-  const include = await glob(config.include, { cwd: config.cwd });
+  const include = await glob(config.include, { cwd });
 
   if (include.length === 0) {
     throw new Error(`No config files found for ${config.include}`);

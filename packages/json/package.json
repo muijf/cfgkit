@@ -1,6 +1,6 @@
 {
   "name": "@cfgkit/json",
-  "version": "0.0.0-dev-20250312215221",
+  "version": "0.0.0-dev-20250312221538",
   "description": "JSON package for cfgkit",
   "homepage": "https://docs.muijf.com/cfgkit",
   "main": "./dist/index.js",

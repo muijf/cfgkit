@@ -1,4 +1,5 @@
 import { config } from "@cfgkit/core";
+import { resolve } from "path";
 import { z } from "zod";
 
 interface Config {
@@ -13,9 +14,11 @@ interface Args {
   hello: string;
 }
 
+const cwd = resolve(process.cwd(), "src");
+
 const toml = await config<Config, Args>({
   include: "cfgkit.config.toml",
-  cwd: process.cwd(),
+  cwd,
   data: {
     hello: "world",
   },
@@ -26,7 +29,7 @@ console.log(toml);
 
 const json = await config<Config, Args>({
   include: "cfgkit.config.json",
-  cwd: process.cwd(),
+  cwd,
   data: {
     hello: "world",
   },
@@ -37,7 +40,7 @@ console.log(json);
 
 const js = await config<Config, Args>({
   include: "cfgkit.config.js",
-  cwd: process.cwd(),
+  cwd,
   data: {
     hello: "world",
   },
@@ -48,7 +51,7 @@ console.log(js);
 
 const yaml = await config<Config, Args>({
   include: "cfgkit.config.yaml",
-  cwd: process.cwd(),
+  cwd,
   data: {
     hello: "world",
   },
@@ -59,7 +62,7 @@ console.log(yaml);
 
 const ts = await config<Config, Args>({
   include: "cfgkit.config.ts",
-  cwd: process.cwd(),
+  cwd,
   data: {
     hello: "world",
   },
@@ -85,7 +88,7 @@ interface MergedArgs {
 
 const merged = await config<MergedConfig, MergedArgs>({
   include: ["cfgkit.merged.ts", "cfgkit.merged.yaml"],
-  cwd: process.cwd(),
+  cwd,
   data: {
     hello: "world",
     world: "hello",

@@ -2,7 +2,7 @@
   "name": "cfgkit-example",
   "private": true,
   "scripts": {
-    "load": "bun load.ts"
+    "load": "bun ./src/load.ts"
   },
   "dependencies": {
     "@cfgkit/core": "workspace:*",
@@ -11,5 +11,8 @@
     "@cfgkit/toml": "workspace:*",
     "@cfgkit/typescript": "workspace:*",
     "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.10"
   }
 }

@@ -9,4 +9,4 @@
 "@cfgkit/yaml": patch
 ---
 
-Fixed dependencies
+Just a small fix
