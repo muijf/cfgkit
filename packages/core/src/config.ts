@@ -24,6 +24,11 @@ export type LoaderPackage =
   | YamlPackage
   | string;
 
+export interface LoadArgs {
+  config: Config;
+  path: string;
+}
+
 export interface Loader {
   /**
    * The package name of the loader.
@@ -39,7 +44,7 @@ export interface Loader {
    * Loads the config file.
    * @param path - The path to the config file.
    */
-  load(config: Config, path: string): Promise<any>;
+  load(args: LoadArgs): Promise<any>;
 }
 
 export interface Config<Data = any> {
@@ -108,13 +113,13 @@ export async function config<Result = any, Data = any>(config: Config<Data>) {
 
         if (data.extensions.includes(ext)) {
           const resolved = resolve(cwd, path);
-          const result = await data.load(config, resolved);
+          const result = await data.load({ config, path: resolved });
           results.push(result as Result);
         }
       } else {
         if (anyLoader.extensions.includes(ext)) {
           const resolved = resolve(cwd, path);
-          const result = await anyLoader.load(config, resolved);
+          const result = await anyLoader.load({ config, path: resolved });
           results.push(result as Result);
         }
       }

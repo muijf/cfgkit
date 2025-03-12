@@ -1,4 +1,4 @@
-import type { Config, Loader } from "@cfgkit/core";
+import type { Loader } from "@cfgkit/core";
 import {
   YAML_EXTENSIONS,
   YAML_PACKAGE,
@@ -14,7 +14,7 @@ export function yaml(): YamlLoader {
   return {
     __package: YAML_PACKAGE,
     extensions: YAML_EXTENSIONS,
-    load(config: Config, path: string) {
+    load({ path }) {
       return parseYamlFile(path);
     },
   };

@@ -1,4 +1,4 @@
-import type { Config, Loader } from "@cfgkit/core";
+import type { Loader } from "@cfgkit/core";
 import { parseJsonFile } from "@cfgkit/utils";
 import { JSON_EXTENSIONS } from "@cfgkit/shared";
 import { JSON_PACKAGE, type JsonPackage } from "@cfgkit/shared";
@@ -11,7 +11,7 @@ export function json(): JsonLoader {
   return {
     __package: JSON_PACKAGE,
     extensions: JSON_EXTENSIONS,
-    load(config: Config, path: string) {
+    load({ path }) {
       return parseJsonFile(path);
     },
   };

@@ -1,4 +1,4 @@
-import type { Config, Loader } from "@cfgkit/core";
+import type { Loader } from "@cfgkit/core";
 import { parseTomlFile } from "./parseTomlFile";
 import {
   TOML_EXTENSIONS,
@@ -14,7 +14,7 @@ export function toml(): TomlLoader {
   return {
     __package: TOML_PACKAGE,
     extensions: TOML_EXTENSIONS,
-    load(config: Config, path: string) {
+    load({ path }) {
       return parseTomlFile(path);
     },
   };

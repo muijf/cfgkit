@@ -2,13 +2,8 @@ import { type Options as SWCOptions, transform } from "@swc/core";
 import type { CompilerOptions } from "typescript";
 import { join } from "node:path";
 import { readFile } from "node:fs/promises";
-import {
-  deregisterHook,
-  parseJsonFile,
-  registerHook,
-  requireFromString,
-} from "@cfgkit/utils";
-
+import { deregisterHook, registerHook, requireFromString } from "./requireHook";
+import { parseJsonFile } from "@cfgkit/utils";
 function resolveSWCOptions(
   cwd: string,
   compilerOptions: CompilerOptions

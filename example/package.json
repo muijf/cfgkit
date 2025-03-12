@@ -1,5 +1,6 @@
 {
-  "name": "cfgkit-example-test",
+  "name": "cfgkit-example",
+  "private": true,
   "scripts": {
     "load": "bun load.ts"
   },

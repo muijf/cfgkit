@@ -1,9 +1,32 @@
 {
   "name": "@cfgkit/core",
-  "version": "0.1.1",
+  "version": "0.0.0",
   "description": "Core package for cfgkit",
-  "main": "./src/index.ts",
-  "types": "./src/index.ts",
+  "homepage": "https://docs.muijf.com/cfgkit",
+  "sideEffects": false,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/muijf/cfgkit.git",
+    "directory": "packages/core"
+  },
+  "exports": {
+    ".": {
+      "source": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.js",
+      "import": {
+        "types": "./dist/index.d.mts",
+        "default": "./dist/index.mjs"
+      }
+    },
+    "./package.json": "./package.json"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsup"
+  },
   "dependencies": {
     "@cfgkit/shared": "workspace:*",
     "@cfgkit/typescript": "workspace:*",
@@ -11,6 +34,10 @@
     "glob": "^11.0.1"
   },
   "devDependencies": {
-    "@types/node": "^22.13.10"
-  }
+    "@types/node": "^22.13.10",
+    "tsup": "^8.4.0"
+  },
+  "files": [
+    "dist"
+  ]
 }
